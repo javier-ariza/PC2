@@ -1,0 +1,38 @@
+  GNU nano 2.9.3                           docker-compose.yml                                     
+version: "3.3"
+services:
+  details:
+    build: ./Details/.
+    image: 22/details
+    container_name: 22-details
+    ports:
+      - "9080"
+    environment:
+      - SERVICE_VERSION=v3
+  productpage:
+    build: ./ProductPage/.
+    image: 22/productpage
+    container_name: 22-productpage
+    ports:
+     - '9080:9080'
+    environment:
+     - GROUP_NUMBER=22
+  reviews:
+    build:
+      context: practica_creativa2/bookinfo/src/reviews/reviews-wlpcfg
+    image: 22/reviews
+    container_name: 22-reviews
+    ports:
+     - '9080'
+    environment:
+     - SERVICE_VERSION=v3
+     - ENABLE_RATINGS=true
+  ratings:
+    build: ./Ratings/.
+    image: 22/ratings
+    container_name: 22-ratings
+    ports:
+     - '9080'
+    environment:
+     - SERVICE_VERSION=v3
+
