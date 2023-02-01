@@ -8,7 +8,6 @@ if orden == "arrancar":
   os.system('sudo apt-get install -y docker.io')
   os.system('sudo apt-get install -y docker-compose')
   os.system('git clone https://github.com/CDPS-ETSIT/practica_creativa2.git')
-  os.system("cp -r practica_creativa2/bookinfo/src/productpage ProductPage/")
   os.system("cp practica_creativa2/bookinfo/src/details/details.rb Details/")
   os.system("cp practica_creativa2/bookinfo/src/ratings/package.json Ratings/")
   os.system("cp practica_creativa2/bookinfo/src/ratings/ratings.js Ratings/")
