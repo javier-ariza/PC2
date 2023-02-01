@@ -13,7 +13,7 @@ if orden == "arrancar":
   os.system("cp practica_creativa2/bookinfo/src/ratings/package.json Ratings/")
   os.system("cp practica_creativa2/bookinfo/src/ratings/ratings.js Ratings/")
   os.chdir('practica_creativa2/bookinfo/src/reviews')
-  os.system('sudo docker run --rm -u root -v "$(pwd)":/home/gradle/project -w /home/gradle/project gradle:4.8.1 gradle clean build')
+  os.system('sudo docker run --rm -u root -v "$(pwd)":/home/gradle/project -w /home/gradle/projec$
   os.system('sudo docker-compose build')
   os.system('sudo docker-compose up')
 

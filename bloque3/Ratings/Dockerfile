@@ -5,6 +5,7 @@ COPY ratings.js /opt/microservices/
 
 RUN apt-get update
 
+
 ENV SERVICE_VERSION v3
 
 RUN npm install
