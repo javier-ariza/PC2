@@ -7,9 +7,9 @@ RUN apt-get update
 
 
 ENV SERVICE_VERSION v3
-
+WORKDIR /opt/microservices
 RUN npm install
 
 EXPOSE 9080
 
-CMD node /opt/microservices/ratings.js 9080
+CMD node ratings.js 9080
